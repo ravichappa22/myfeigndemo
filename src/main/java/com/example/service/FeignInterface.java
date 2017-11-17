@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(value="myrestfeign", url="http://localhost:9090")
 public interface FeignInterface {
 	
-	@RequestMapping(value="/name", method = RequestMethod.GET)
+	@RequestMapping(value="/nameexternal", method = RequestMethod.GET)
 	public String getMyName(@RequestHeader("Authorization") String authorization);
 }
